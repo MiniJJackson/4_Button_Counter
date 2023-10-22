@@ -7,17 +7,20 @@ export default function App() {
 
   const increase = () => {
     console.log("increase");
+    setCounter((currentCounter) => currentCounter + 1);
+    console.log(counter);
   }
 
   const decrease = () => {
+    setCounter((currentCounter) => currentCounter - 1);
     console.log("decrease");
   }
 
   return (
     <View style={styles.container}>
-      <Button style="button" title="increase" onPress={() => console.log("increase")} />
-      <Button style="button" title="decrease" onPress={() => console.log("decrease")} />
-      <Text style="text">you clicked 0 times</Text>
+      <Button style="button" title="increase" onPress={increase} />
+      <Button style="button" title="decrease" onPress={decrease} />
+      <Text style="text">you clicked {counter} times</Text>
       <StatusBar style="auto" />
     </View>
   );

@@ -1,7 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import React, { useState } from 'react';
 
 export default function App() {
+  const [ counter, setCounter ]= useState(0);
+
+  const increase = () => {
+    console.log("increase");
+  }
+
+  const decrease = () => {
+    console.log("decrease");
+  }
 
   return (
     <View style={styles.container}>
